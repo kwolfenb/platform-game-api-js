@@ -1,14 +1,13 @@
 export class Enemy {
-    constructor(xLocation, yLocation, imgLink){
-        this.x = Math.random() * 1000 + 600;
+    constructor(imgLink){
+        this.x = Math.random() * 2000 + 600;
         this.y = Math.random() * 400;
-        this.height = 75;
-        this.width = 75;
+        this.height = Math.random() * 50 + 75;
+        this.width = Math.random() * 50 + 75;
         this.velocityY = 0;
-        this.velocityX = 0;
+        this.velocityX = -(Math.random() * 2) - .5;
         this.image = new Image();
         this.image.src = imgLink;
     }
-
 
 }
